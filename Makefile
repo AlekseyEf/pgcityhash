@@ -9,7 +9,7 @@ cityhash.o: cityhash.cpp
 pgcityhash.o: pgcityhash.c
 	$(CC) $(CFLAGS) -fpic -c pgcityhash.c
 
-pgcityhash.so: cityhash.o cityhash.o
+pgcityhash.so: cityhash.o pgcityhash.o
 	$(CC) $(LDFLAGS) -shared -o pgcityhash.so cityhash.o pgcityhash.o
 
 install:
