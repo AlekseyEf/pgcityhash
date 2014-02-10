@@ -6,11 +6,9 @@
     PG_MODULE_MAGIC;
 #endif
 
-//typedef unsigned long long uint64;
+PG_FUNCTION_INFO_V1(cityhash);
 
-PG_FUNCTION_INFO_V1(cityhash64);
-
-Datum cityhash64(PG_FUNCTION_ARGS)
+Datum cityhash(PG_FUNCTION_ARGS)
 {
     text *msg = PG_GETARG_TEXT_P(0);
 
